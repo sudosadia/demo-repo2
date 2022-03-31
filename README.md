@@ -2,12 +2,12 @@
 This repository is destined to create a tutorial to learn keras. We have used the dataset Poker Hand that is availavle in this link: http://archive.ics.uci.edu 
 
 The tutorial includes the following topics:
-  - [Loading Data](##LOADING-DATA)
- 2. Creating Model using Keras
- 3. Compiling Model
- 4. Training Model
- 5. Evaluating Model
- 6. Tuning Parameters
+  - [Loading Data](#LOADING-DATA)
+ - [Creating Model](#CREATING-MODEL)
+ - [Compiling Model](#COMPILING-MODEL)
+ - [Fitting Model](#FITTING-MODEL)
+ - [Evaluating Model](#EVALUATING-MODEL)
+ - [Tuning Parameters](#TUNING-MODEL)
 
 ## Data Description:
 The Poker Hand database consists of 1,025,010 instances of poker hands. Each instance is an example of a poker hand consisting of five cards drawn from a standard deck of 52 cards. Each card is described using two attributes (suit and rank), for a total of 10 features. There is one Class attribute that describes the Poker Hand. The order of cards is important, which is why there are 480 possible Royal Flush hands as compared to 4 (one for each suit explained in more detail below):
@@ -41,7 +41,7 @@ The training and testing data do not need the last column which represents the p
 ## CREATING MODEL
 We created a simple neural network model with Keras. A neural network is inspired by a biological neural network but here the connections between neurons are modeled by weights. Neural networks are organized into layers of nodes. An individual node might be connected to several nodes in the layer beneath it, from which it receives data, and several nodes in the layer above it, to which it sends data. First we created a sequential model which means that the output of each layer is added as input to the next layer. Adding layers are like stacking lego blocks one by one. We have used dense layer which represents a fully connected layer. We need to mention input dimension in the input layer, number of neurons in hidden layer, output dimension in the output layer. The neural netowork consists of 10 neurons in the input layer, 15 neurons in 1st and 2nd hidden layer and 10 neurons in the output layer, one for each poker hand. The activation function we used here is relu (rectified linear unit). The output layer has different activation function called softmax since this is a multiclass classification. 
 
-## Compiling Model
+## COMPILING MODEL
 Model is compiled using compile() method of keras. We have to specifiy the loss function, optimizer and metrics to be used. We use Categorical_crossentropy loss since we have multiple classes (10 poker hand classes). The optimizer that we have used is adam. Optimizers are methods used to change the attributes of neural network such as weights and learning rate in order to reduce the loss. Adam is an adaptive learning rate method. Finally, we have used accuracy as metric to judge the performance of our model. model.summary() method shows the summary of the whole model including the shape of all layers.
 
 ## FITTING MODEL
