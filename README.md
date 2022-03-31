@@ -62,7 +62,7 @@ Model can be tuned in multiple ways. Here we, will show how different parameters
 A new model is created with two more hidden layers. This time we will use more neurons in the hidden layers. We call this model as model2 which is sequential as before, input layer has 10 neurons, output layers has 10 neurons for each poker hand class, each hdiden layer has 50 neurons. The activaton functions are same as our first model. The batch size, optimizer and epochs are same. The model's accuracy change drastically. Our base model with one hidden layer consisting of 15 neurons has about 57% accuracy where the second model with two hidden layers each consisting of 50 neurons has about 74% accuracy.
 
 ### Changing Batch size:
-Depending on the model and dataset, different parameters can have diffrent impact. Now we will see how batch size affects model's performance. Remember that our base model (model 1) has accuracy 57% with batch size 100. Here we use same hidden layers and parameters as base model except batch size which is 50 now. So, we divide our dataset into smaller batches than previous one. The model's accuracy improve from % to % and the loss is changed to.
+Depending on the model and dataset, different parameters can have diffrent impact. Now we will see how batch size affects model's performance. Remember that our base model (model 1) has accuracy 57% with batch size 100. Here we use same hidden layers and parameters as base model except batch size which is 50 now. So, we divide our dataset into smaller batches than previous one. 
 
 ### Changing Epochs:
 We create our 4th model where number of epochs is 500 and all the other parameters are same as our first model. The model's accuracy improve to 75% from 57%.
